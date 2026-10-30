@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cnfhe1jo7khch" path="res://player/simple_gun/gun_model.glb" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://bjuhv4u0pe18c" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Texture2D" uid="uid://bqu6y1e84tshd" path="res://player/reticle.png" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_07orm"]
 
@@ -24,3 +25,19 @@ transform = Transform3D(-0.24186702, 0, 0.028734727, 0, 0.2435679, 0, -0.0287347
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=967270313]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_kqu6x")
+
+[node name="Reticle" type="TextureRect" parent="." unique_id=1374694151]
+modulate = Color(1, 1, 1, 0.41568628)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_g1dw6")
+expand_mode = 1
