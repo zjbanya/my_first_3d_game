@@ -12,3 +12,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		%Camera3D.rotation_degrees.x = clamp(
 			%Camera3D.rotation_degrees.x, -90.0, 90.0
 		)
+
+func _physics_process(_delta: float) -> void:
+	const SPEED = 5.5
+	
+	var input_direction_2D = Input.get_vector(
+		"move_left", "move_right", "move_forward", "move_back"
+	)
+	var input_direction_3D = Vector3(
+		input_direction_2D.x, 0.0, input_direction_2D.y
+	)
+	var direction = transform.basis * input_direction_3D
+	
+	velocity.x = direction.x * SPEED
+	velocity.z = direction.z * SPEED
+	
+	move_and_slide()
