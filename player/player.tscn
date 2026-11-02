@@ -6,8 +6,6 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_07orm"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
-
 [node name="Player" type="CharacterBody3D" unique_id=2145680709]
 script = ExtResource("1_rkbax")
 
@@ -21,10 +19,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.495436, 0)
 
 [node name="gun_model" parent="Camera3D" unique_id=519069454 instance=ExtResource("1_oul6g")]
 transform = Transform3D(-0.24186702, 0, 0.028734727, 0, 0.2435679, 0, -0.028734727, 0, -0.24186702, 0.3726145, -0.19287944, -0.4493431)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=967270313]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_kqu6x")
 
 [node name="Reticle" type="TextureRect" parent="." unique_id=1374694151]
 modulate = Color(1, 1, 1, 0.41568628)
