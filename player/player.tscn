@@ -18,7 +18,11 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.495436, 0)
 
 [node name="gun_model" parent="Camera3D" unique_id=519069454 instance=ExtResource("1_oul6g")]
-transform = Transform3D(-0.24186702, 0, 0.028734727, 0, 0.2435679, 0, -0.028734727, 0, -0.24186702, 0.3726145, -0.19287944, -0.4493431)
+transform = Transform3D(-0.24297452, -0.00032617303, 0.016987305, 0, 0.24352306, 0.0046758805, -0.016990433, 0.004664492, -0.2429298, 0.4129151, -0.15213048, -0.4493431)
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D/gun_model" unique_id=1238440983]
+unique_name_in_owner = true
+transform = Transform3D(-1.049441, 0, -0.12467761, 0, 1.0568215, 0, 0.12467761, 0, -1.049441, 0.011949301, 0.023647785, 0.5240023)
 
 [node name="Reticle" type="TextureRect" parent="." unique_id=1374694151]
 modulate = Color(1, 1, 1, 0.41568628)
@@ -35,3 +39,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_g1dw6")
 expand_mode = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1620230274]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true

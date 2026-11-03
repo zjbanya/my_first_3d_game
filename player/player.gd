@@ -8,7 +8,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		rotation_degrees.y -= event.relative.x * mouse_sensitvity
-		%Camera3D.rotation_degrees.x -= event.relative.y * mouse_sensitvity
+		%Camera3D.rotation_degrees.x -= event.relative.y * 0.2
 		%Camera3D.rotation_degrees.x = clamp(
 			%Camera3D.rotation_degrees.x, -90.0, 90.0
 		)
@@ -36,3 +36,15 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 0
 		
 	move_and_slide()
+	
+	if Input.is_action_pressed("shoot") and %Timer.is_stopped():
+		shoot_bullet()
+
+func shoot_bullet():
+	const BULLET_3D = preload("uid://bc30re6c15dj2")
+	var new_bullet = BULLET_3D.instantiate()
+	%Marker3D.add_child(new_bullet)
+	
+	new_bullet.global_transform = %Marker3D.global_transform
+	
+	%Timer.start()

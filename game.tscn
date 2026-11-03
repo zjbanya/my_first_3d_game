@@ -1,13 +1,8 @@
 [gd_scene format=3 uid="uid://2vs71jo84j1t"]
 
 [ext_resource type="PackedScene" uid="uid://5skwuuih03k5" path="res://player/player.tscn" id="1_80nbo"]
-[ext_resource type="Texture2D" uid="uid://dyyjyayh0f1sm" path="res://level/checkboard.png" id="1_e2o6t"]
+[ext_resource type="Material" uid="uid://csbsjh4gfde45" path="res://level/platform.tres" id="1_feb5d"]
 [ext_resource type="Material" uid="uid://cjp3kbpi62hkr" path="res://level/bridge.tres" id="2_feb5d"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80nbo"]
-albedo_color = Color(0.7258361, 0.39858073, 0.42628288, 1)
-albedo_texture = ExtResource("1_e2o6t")
-uv1_triplanar = true
 
 [sub_resource type="Environment" id="Environment_07orm"]
 background_mode = 1
@@ -27,67 +22,72 @@ fog_height_density = 0.3509
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 use_collision = true
 size = Vector3(10, 10, 10)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1885407956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 22)
 use_collision = true
 size = Vector3(10, 10, 20)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=693055097]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, -5, 27)
 use_collision = true
 size = Vector3(10, 10, 18)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=8620183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, -5, 27)
 use_collision = true
 size = Vector3(10, 10, 10)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=704225283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, -5, 4)
 use_collision = true
 size = Vector3(10, 10, 18)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1467413158]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 use_collision = true
 size = Vector3(10, 10, 10)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=417549277]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 8.5)
+material_override = ExtResource("2_feb5d")
 use_collision = true
 size = Vector3(10, 1, 3)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1176566540]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -0.5, -3.5)
+material_override = ExtResource("2_feb5d")
 use_collision = true
 size = Vector3(10, 1, 3)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=2119127802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, -0.5, -3.5)
+material_override = ExtResource("2_feb5d")
 use_collision = true
 size = Vector3(3, 1, 3)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=768240337]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -0.5, 17.5)
+material_override = ExtResource("2_feb5d")
 use_collision = true
 size = Vector3(3, 1, 3)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=708408511]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, -0.5, 2.5)
+material_override = ExtResource("2_feb5d")
 use_collision = true
 size = Vector3(3, 1, 3)
-material = SubResource("StandardMaterial3D_80nbo")
+material = ExtResource("1_feb5d")
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=1281509054]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, -0.5, 10.5)
@@ -96,6 +96,7 @@ size = Vector3(3, 1, 3)
 material = ExtResource("2_feb5d")
 
 [node name="Player" parent="." unique_id=2145680709 instance=ExtResource("1_80nbo")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1, 0, -1)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1159517138]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.8660254, 0, -0.8660254, 0.49999997, 0, 4, 2)
