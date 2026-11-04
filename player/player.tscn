@@ -42,5 +42,5 @@ expand_mode = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=1620230274]
 unique_name_in_owner = true
-wait_time = 0.5
+wait_time = 0.3
 one_shot = true
